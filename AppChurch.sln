@@ -17,17 +17,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1 - Container", "3.1 - Co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Services", "4 - Services", "{088626D4-1109-42D7-ABE5-55ECB4AA9BF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppChurch.API", "AppChurch.API\AppChurch.API.csproj", "{B76E2BE8-75FF-4A61-8A97-B922F5FFE538}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppChurch.API", "AppChurch.API\AppChurch.API.csproj", "{B76E2BE8-75FF-4A61-8A97-B922F5FFE538}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppChurch.Domain", "AppChurch.Domain\AppChurch.Domain.csproj", "{38D2A832-D35B-4C10-A20F-0DE4024B2A59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppChurch.Domain", "AppChurch.Domain\AppChurch.Domain.csproj", "{38D2A832-D35B-4C10-A20F-0DE4024B2A59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppChurch.Container", "AppChurch.Container\AppChurch.Container.csproj", "{DF79010D-6A43-425B-ABDF-3179260A9D2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppChurch.Container", "AppChurch.Container\AppChurch.Container.csproj", "{DF79010D-6A43-425B-ABDF-3179260A9D2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppChurch.Data", "AppChurch.Data\AppChurch.Data.csproj", "{F003AE8B-CD07-4D40-BCE3-FAC60851837C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppChurch.Data", "AppChurch.Data\AppChurch.Data.csproj", "{F003AE8B-CD07-4D40-BCE3-FAC60851837C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppChurch.Services", "AppChurch.Services\AppChurch.Services.csproj", "{33BF6A7B-2E25-4016-A2D6-AF483E27AF83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppChurch.Services", "AppChurch.Services\AppChurch.Services.csproj", "{33BF6A7B-2E25-4016-A2D6-AF483E27AF83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appchurch.Test", "Appchurch.Test\Appchurch.Test.csproj", "{8262962B-3FE8-48BF-99CD-3C4DFA5507EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppChurch.Test", "Appchurch.Test\AppChurch.Test.csproj", "{8262962B-3FE8-48BF-99CD-3C4DFA5507EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
