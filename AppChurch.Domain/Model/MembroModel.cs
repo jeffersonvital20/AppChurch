@@ -16,6 +16,7 @@ namespace AppChurch.Domain.Model
         public DateTime DataBatismo { get; set; }
         public DateTime DataNascimento { get; set; }
         public EnderecoModel? Endereco { get; set; }
+        public Dizimo? Dizimo { get; set; }
 
     }
 }
