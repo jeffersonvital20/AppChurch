@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppChurch.Domain.RequestHandlers.QueryHandlers
+namespace AppChurch.Domain.Validation
 {
-    public class ListAllMembrosQueryHandler
+    public interface IValidatable
     {
     }
 }

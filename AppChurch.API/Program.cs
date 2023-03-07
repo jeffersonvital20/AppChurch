@@ -11,7 +11,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("ConnectionStrings")));
+            options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
+            x => x.MigrationsAssembly("AppChurch.Data")));
+
+//builder.Services.AddMediatRApi();
 
 
 var app = builder.Build();
