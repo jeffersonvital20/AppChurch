@@ -1,5 +1,7 @@
 using AppChurch.Data.Context;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +16,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
             x => x.MigrationsAssembly("AppChurch.Data")));
 
-//builder.Services.AddMediatRApi();
+//services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 
 
 var app = builder.Build();
