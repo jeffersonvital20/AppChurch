@@ -1,4 +1,6 @@
 ﻿using AppChrch.Shared.ViewModel;
+using AppChurch.Domain.Model;
+using AppChurch.Domain.Repositories.Interfaces;
 using AppChurch.Domain.Request.Query;
 using AutoMapper;
 using MediatR;
@@ -13,17 +15,28 @@ namespace AppChurch.Domain.RequestHandlers.QueryHandlers
 {
     public class MembrosGetIdQueryHandler : IRequestHandler<MembrosGetByIdQuery, Result<MembrosViewModel>>
     {
-        private readonly IMapper _mapper;
-        
+        //private readonly IMapper _mapper;
+        private readonly IMembroRepository _repository;
 
-        public MembrosGetIdQueryHandler(IMapper mapper)
+
+        public MembrosGetIdQueryHandler(IMembroRepository repository)
         {
-            _mapper = mapper;
+            _repository = repository;
         }
 
         public Task<Result<MembrosViewModel>> Handle(MembrosGetByIdQuery request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            MembroModel result = _repository.GetById(request.Id);
+            MembrosViewModel retorno = new MembrosViewModel()
+            {
+                Nome = result.Nome,
+                Idade = result.Idade,
+                sexo = result.sexo,
+                DataBatismo = result.DataBatismo,
+                DataConversao = result.DataConversao,
+                DataNascimento = result.DataNascimento
+            };
+            return Result.Success(retorno);
         }
     }
 }

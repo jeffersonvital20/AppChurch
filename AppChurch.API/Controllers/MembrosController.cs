@@ -13,9 +13,23 @@ namespace AppChurch.API.Controllers
         {}
         [HttpGet("getById")]
         public Task<IActionResult> GetById([FromQuery] Guid id) => SendRequest(new MembrosGetByIdQuery(id));
-        
+
+        [HttpGet("getAll")]
+        public Task<IActionResult> GetAll()
+            => SendRequest(new MembrosGetAllQuery());
+
         [HttpPost("create")]
         public Task<IActionResult> Create([FromBody] MembrosViewModel membro)
             => SendRequest(new CreateMembroRequest(membro));
+
+        [HttpPatch("update")]
+        public Task<IActionResult> Update([FromBody] UpdateMembrosViewModel input)
+            => SendRequest(new UpdateMembroRequest(input));
+
+
+
+        //[HttpDelete("delete")]
+        //public Task<IActionResult> Delete([FromQuery] string id)
+        //    => SendRequest(new Delete { entity }Request(id));
     }
 }
