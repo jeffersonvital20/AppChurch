@@ -28,8 +28,8 @@ namespace AppChurch.API.Controllers
 
 
 
-        //[HttpDelete("delete")]
-        //public Task<IActionResult> Delete([FromQuery] string id)
-        //    => SendRequest(new Delete { entity }Request(id));
+        [HttpDelete("delete")]
+        public Task<IActionResult> Delete([FromBody] DeleteMembrosViewModel id)
+            => SendRequest(new DeleteMembroRequest(id));
     }
 }

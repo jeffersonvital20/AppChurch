@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace AppChurch.Domain.Request.Command
 {
-    public class UpdateMembroRequest : IRequest<Result<UpdateMembrosViewModel>>, IValidatable
+    public class UpdateMembroRequest : IRequest<Result<bool>>, IValidatable
     {
         public UpdateMembrosViewModel _membro { get; set; }
         public UpdateMembroRequest(UpdateMembrosViewModel membro)

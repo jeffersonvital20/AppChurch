@@ -14,7 +14,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace AppChurch.Domain.RequestHandlers.CommandHandlers
 {
-    public sealed class UpdateMembrosRequestHandler : IRequestHandler<UpdateMembroRequest, Result<UpdateMembrosViewModel>>
+    public sealed class UpdateMembrosRequestHandler : IRequestHandler<UpdateMembroRequest, Result<bool>>
     {
         //private readonly IMapper _mapper;
         private readonly IMembroRepository _repository;
@@ -25,7 +25,7 @@ namespace AppChurch.Domain.RequestHandlers.CommandHandlers
             this._repository = repository;
         }       
 
-        public async Task<Result<UpdateMembrosViewModel>> Handle(UpdateMembroRequest request, CancellationToken cancellationToken)
+        public async Task<Result<bool>> Handle(UpdateMembroRequest request, CancellationToken cancellationToken)
         {
             var UpdateMembro = _repository.GetById(request._membro.Id);
             UpdateMembro.Nome = request._membro.Nome;
@@ -39,7 +39,7 @@ namespace AppChurch.Domain.RequestHandlers.CommandHandlers
 
             _repository.Update(UpdateMembro);
 
-            throw new NotImplementedException();
+            return true;
         }
     }
 }
